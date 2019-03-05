@@ -1,0 +1,18 @@
+.footer
+  .footer__top
+    .wrapper
+      span.
+        Подключайся и играй на наших серверах!
+      include contacts.pug 
+
+  .footer__middle
+    .wrapper
+      .row
+          -for(var i=1; i<5; i++)
+            a(href='#')
+              img(src='/img/partner'+i+'.png' alt='partner')
+          -;
+
+  .copyright.
+    (c) Poshtar Boba, 2016
+script(src='js/src.js')

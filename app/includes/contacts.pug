@@ -1,0 +1,26 @@
+- 
+  var contacts = [
+    {
+      title: 'Админ:',
+      phones: [
+        '+38(068) 333-22-10',
+        '+38(099) 750-50-50'
+      ]
+    },
+    {
+      title: 'По донату:',
+      phones: [
+      '067-33-22-180',
+      ''
+      ]
+    }
+  ]
+
+table.contacts
+  each item in contacts
+    tr
+      td.contact__title=item.title
+      td
+        each phone in item.phones
+          p
+            a(href="tel:"+phone.replace(/\D+/g, '')).contact__phone=phone

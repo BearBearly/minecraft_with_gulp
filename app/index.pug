@@ -1,0 +1,88 @@
+doctype html
+html(lang="uk")
+  head
+    include includes/head.pug
+  body
+    include includes/header.pug
+
+    .page
+      .wrapper
+        .row
+          .column.column-tablet-1-4.left-sidebar
+            -
+              var sidebarList = [
+                {
+                  title: 'Мир Minecraft',
+                  sublist : [
+                    {
+                      title: 'Блоки'
+                    },
+                    {
+                      title: 'Мобы'
+                    },
+                    {
+                      title: 'Структуры'
+                    },
+                    {
+                      title: 'Биомы'
+                    },
+                    {
+                      title: 'Миры'
+                    }
+                  ]
+                }, 
+                {
+                  title: 'Industrial craft',
+                },
+                {
+                  title: 'OptiFine',
+                }, 
+                {
+                  title: 'Forge',
+                },  
+                {
+                  title: 'TooManyItems',
+                },  
+                {
+                  title: 'RailCraft',
+                }                  
+              ];
+
+            nav
+              +listMenu(sidebarList)
+
+          .column.column-tablet-3-4
+            .article
+              .article__title Подключайся и играй на наших серверах!
+              .article__img
+                img(src="img/article_img.png", alt="")
+              .article__text.
+                Minecraft — компьютерная игра в стиле песочницы с открытым миром, в которой перед игроком не ставятся
+                какие-либо определенные цели — игроки сами выбирают, что им делать в игре. Несмотря на это, игра содержит
+                систему достижений — поощрительных наград за выполнение определенных действий.
+            .row
+              -
+                var posts = [
+                  {
+                    date: '2016-08-04',
+                    text: 'Страж подводной крепости довольно сильный противник для начинащего ирока',
+                    img: 'article-img1.png'
+                  },                 
+                  {
+                    date: '2016-06-27',
+                    text: 'Встречайте: белые медведи в холодных биомах!',
+                    img: 'article-img2.png'
+                  },                
+                  {
+                    date: '2016-04-17',
+                    text: 'В мобильной версии теперь можно приручить кролика, он станет верным другом',
+                    img: 'article-img3.png'
+                  } 
+                ]
+
+              each item in posts
+                +makePost(item)
+
+
+            
+    include includes/footer.pug

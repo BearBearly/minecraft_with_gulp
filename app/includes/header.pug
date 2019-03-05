@@ -1,0 +1,64 @@
+include mixins.pug
+
+.header
+  .header__top
+    .wrapper.wrapper_header__top
+      div Подключайся и играй на наших серверах!
+      .icon-menu
+        ul
+          li
+            a(href="#")
+              i.icon.icon-fb
+          li
+            a(href="#")
+              i.icon.icon-vk
+          li
+            a(href="#")
+              i.icon.icon-flag
+  .wrapper
+    .row
+      .column-phablet-1-2.header-column.header-column_logo
+        a.logo(href="#")
+          img(src="img/logo.png" alt="")
+      .column-phablet-1-2.header-column.header-column_info
+        include contacts.pug
+      .column-phablet-1-2.header-column.header-column_btns
+        a.button(href="#") Выбрать сервер
+        a.button(href="#") Случайный
+      .column-phablet-1-2.header-column.header-column_img
+        a.logo(href="#")
+          img(src="img/header_img.png" alt="")
+
+  .header__menu
+    .wrapper
+      -
+        var mainMenu = [
+          {
+            title: 'Главная',
+            href: 'index.html'
+          }, 
+          {
+            title: 'Об игре',
+            href: 'about.html'
+          },           
+          {
+            title: 'Список серверов',
+            href: 'servers.html'
+          }, 
+          {
+            title: 'Наша команда',
+            href: 'team.html'
+          },  
+          {
+            title: 'Донат',
+            href: 'donat.html'
+          },         
+        ];
+
+      .main-nav__opener
+        span
+          i.fas.fa-angle-double-right
+          |Меню 
+
+      +makeList(mainMenu)
+      
