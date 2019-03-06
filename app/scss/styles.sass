@@ -17,6 +17,9 @@ body
 img
   max-width: 100%
 
+.row_partners
+  justify-content: center
+
 .v-step-bottom
   margin-bottom: $v-step
 
@@ -243,8 +246,10 @@ img
       padding-right: 4px
   .footer__middle
     background: $main-color-lighter
-    .row
+    .row_partners
       justify-content: center
+      +breakpoint(laptop)
+        justify-content: space-between
       a
         font-size: 0
         margin: 10px 5px
