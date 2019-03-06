@@ -8,7 +8,7 @@ html(lang="uk")
     .page
       .wrapper
         .row
-          .column.column-tablet-1-4.left-sidebar
+          .column.column-tablet-1-4.left-sidebar.v-step-bottom
             -
               var sidebarList = [
                 {
@@ -52,7 +52,7 @@ html(lang="uk")
               +listMenu(sidebarList)
 
           .column.column-tablet-3-4
-            .article
+            .article.v-step-bottom
               .article__title Подключайся и играй на наших серверах!
               .article__img
                 img(src="img/article_img.png", alt="")

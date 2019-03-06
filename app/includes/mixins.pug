@@ -27,7 +27,7 @@ mixin listMenu(arr)
           +listMenu(item.sublist)
 
 mixin makePost(item)
-  .column.column-phablet-1-3.column-posts
+  .column.column-phablet-1-3.column-posts.v-step-bottom
     .post
       .post__top
         a(href="#").post__date=item.date
